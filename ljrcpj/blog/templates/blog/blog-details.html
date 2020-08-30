@@ -1,0 +1,65 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block blogdetails %}
+    <!-- Blog Details Hero Begin -->
+<section class="blog-details-hero spad set-bg" data-setbg="https://felinefineclothing.com/rookiecards/lebron_james_blog_header_collage.png">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="blog__details__hero__text">
+                        <span class="label">Blog</span>
+                        <h2>{{post.title}}</h2>
+                        <ul>
+                            <li><img src="https://felinefineclothing.com/rookiecards/Phil_bio_photo_small.png" alt=""> <span>{{post.author}}</span>
+                            </li>
+                            <li><i class="fa fa-calendar-o"></i> <span>{{post.published_date}}</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad" style="padding-top: 100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__text">
+                        <p>{{post.body | safe}}</p>
+                    </div>
+                  
+                    
+                    <div class="blog__details__share">
+                        <a href="https://www.facebook.com/share.php?u=https://lebronjamesrookiecard.com{{ post.get_absolute_url }}" class="blog__details__share__item">
+                            <i class="fa fa-facebook"></i>
+                            <span>Share</span>
+                        </a>
+                        <a href="https://twitter.com/share?url=https://lebronjamesrookiecard.com{{ post.get_absolute_url }}" class="blog__details__share__item twitter">
+                            <i class="fa fa-twitter"></i>
+                            <span>Tweet</span>
+                        </a>
+                    </div>
+                    <div class="blog__details__author">
+                        <div class="blog__details__author__pic">
+                            <img src=" https://felinefineclothing.com/rookiecards/Phil_bio_photo.png " alt="">
+                        </div>
+                        <div class="blog__details__author__text">
+                            <h5>Phil</h5>
+                            <p>Sports loving data analyst, LeBron James aficionado</p>
+                        </div>
+                    </div>
+                {% include 'blog/blogcar.html' %}    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Details Section End -->
+{% endblock %}

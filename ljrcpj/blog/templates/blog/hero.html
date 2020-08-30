@@ -1,0 +1,26 @@
+{% block hero %}
+{% load static %}
+<!-- Hero Section Begin -->
+
+    <section class="hero spad set-bg" data-setbg=" /static/img/lebronposegoldbg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7" style="
+    margin-bottom: 25px;">
+                    <div class="hero__text">
+                        <div class="hero__text__title" text-shadow: 0 0 20px black;>
+                            <span>THE #1 RESOURCE FOR LEBRON JAMES ROOKIE CARDS</span>
+                            <h2>Overall<br>Rookie Cards'<br> Average Sales Are Up</h2>
+                    
+                            <h2>{{ stats.changepercent }}<span>/60 days</span></h2>
+                        </div>
+                        <a href="{% url 'slugss' %}" class="primary-btn" style="background-color: #552583; color: #ffffff;"><img src="https://felinefineclothing.com/rookiecards/arc-logo_tiny_white.png"> View All Rookie Cards</a>
+                        <a href="#services" class="primary-btn more-btn" style="background-color: #552583; color: #ffffff;">Learn More</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+{% endblock %}

@@ -1,0 +1,17 @@
+<div class="section-title">
+                        <span>Learn More</span>
+                        <h2>Check out our other blog articles!</h2>
+                        
+                    </div>
+                                <div class="car-thumbs">
+
+                                    <div class="car-thumbs-track car__thumb__slider owl-carousel">{% for post in fink %}
+                                        <div class="ct" data-imgbigurl="{{post.blog_image.urlS}} ">
+                                                <a href="{{ post.get_absolute_url }}"><img
+                                                src="{{post.blog_image.url}} " alt=""><center style="color:#af3744">{{post.title}}</center></a>
+                                        </div>
+                                    {% endfor %}   
+                                    </div>
+                                </div>
+                                
+                            </div>

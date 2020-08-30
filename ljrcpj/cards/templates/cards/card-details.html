@@ -1,0 +1,132 @@
+{% extends 'blog/base.html' %}
+{% block carddetails %}
+{% load static %}
+   <!-- Car Details Section Begin -->
+    <section class="car-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="car__details__pic">
+                        <div class="car__details__pic__large">
+                            <div class="section-title">
+                        <h2><center>{{post.title}}</center></h2>
+                    </div>
+                            
+                            <img class="car-big-img" src=" {{post.imagelink}} " alt="">
+                        </div>
+                    </div>
+                    <div class="container">
+  
+                    <div class="car__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"></i>60 Day Stats  <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{post.ebayafflink}}" target="_blank" role="tab">Best Deals  <i class="fa fa-tags fa-1x" aria-hidden="true"></i></a>
+                            </li>
+                          
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="car__details__tab__info">
+                                    <div class="row">
+                                        <div class="car__details__tab__feature">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <div class="car__details__tab__feature__item">
+                                                <h5>{{post.tagg}} Market Data</h5>
+                                                <ul>
+                                                    
+                                                    <li><i class="fa fa-circle"></i> Volume {{post.salesvolume}}</li>
+                                                    <li><i class="fa fa-circle"></i> Change {{post.changepercent}}</li>
+                                                    <li><i class="fa fa-circle"></i> High {{post.high}}</li>
+                                                    <li><i class="fa fa-circle"></i> Avg. {{post.average}}</li>
+                                                    <li><i class="fa fa-circle"></i> Tx. Volume {{post.transactionvolume}}</li>
+                                                    <li><i class="fa fa-circle"></i> Population {{post.psatenpopulationid}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <div class="car__details__tab__feature__item">
+                                                <h5>BGS Population Report</h5>
+                                                <ul>
+                                                    <li><i class="fa fa-circle"></i> BGS 10 -{{post.bgs10}}</li>
+                                                    <li><i class="fa fa-circle"></i> BGS 9.5 -{{post.bgs95}}</li>
+                                                    <li><i class="fa fa-circle"></i> BGS 9 -{{post.bgs9}}</li>
+                                                    <li><i class="fa fa-circle"></i> BGS 8.5 -{{post.bgs85}}</li>
+                                                    <li><i class="fa fa-circle"></i> BGS 8 -{{post.bgs8}}</li>
+                                                    
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <div class="car__details__tab__feature__item">
+                                                <h5>PSA Population Report</h5>
+                                                <ul>
+                                                    <li><i class="fa fa-circle"></i> PSA 10 -{{post.psatenpopulationid}}</li>
+                                                    <li><i class="fa fa-circle"></i> PSA 9 -{{post.psaninepopulationid}}</li>
+                                                    <li><i class="fa fa-circle"></i> PSA 8 -{{post.psaeightpopulationid}}</li>
+                                                    
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="car__details__tab__info__item">
+                                                <h5>General Information</h5>
+                                                <ul>
+                                                    <li><i class="fa fa-circle"></i>Card # {{post.cardnumber}}</li>
+                                                    <li><i class="fa fa-circle"></i>Print Count {{post.serialnumbered}}</li>
+                                                    
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="car__details__tab__info__item">
+                                                <h5>Variations</h5>
+                                                <ul>
+                                                    <li><i class="fa fa-circle"></i>{{post.variations}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                    </div>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="socialshare">
+                                        <a href="https://www.facebook.com/share.php?u=https://lebronjamesrookiecard.com{{ post.get_absolute_url }}" class="blog__details__share__item">
+                                        <i class="fa fa-facebook"></i>
+                                        <span>Share</span>
+                                        </a>
+                                        <a href="https://twitter.com/share?url=https://lebronjamesrookiecard.com{{ post.get_absolute_url }}" class="blog__details__share__item twitter">
+                                            <i class="fa fa-twitter"></i>
+                                            <span>Tweet</span>
+                                        </a>
+                                        </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel" style="padding-top: 20px;">
+                                <div class="car__details__tab__info">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="car__details__tab__info__item">
+                                                <h5></h5>
+                                          {{post.rsslink}}
+                                    </div>
+                                </div>  
+            </div>
+        </div>
+
+    </section>
+
+
+    {% include 'cards/cardcar.html' %}
+    <!-- Car Details Section End -->{% endblock %}

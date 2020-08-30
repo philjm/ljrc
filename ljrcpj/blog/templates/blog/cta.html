@@ -1,0 +1,27 @@
+{% load static %}
+    <div class="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="cta__item set-bg" data-setbg="{% static 'img/lebronposewithlasers.jpg' %}">
+                        <h4>Do You Want To Buy A Lebron James rookie card?</h4>
+                        <p>We work hard to gather all the best deals and provide you cutting edge market analytics so you can be ahead of the game!<a href="{% url 'slugss' %}"> Check out our shop!</a></p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="cta__item set-bg" data-setbg="{% static 'img/mainhero.jpg' %}">
+                        <h4>Do You Want The Best Lebron James Rookie Card deals, stats, and news delivered to your inbox?</h4>
+                        <form action="newsletter.csv">
+                                    <input type="text" placeholder="Your email">
+                                    <button type="submit">Subscribe Today!</button>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

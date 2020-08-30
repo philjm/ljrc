@@ -1,0 +1,16 @@
+<div class="section-title">
+                        <h2>Learn about more Lebron James rookie cards</h2>
+                    </div>
+                                <div class="car-thumbs">
+
+                                    <div class="car-thumbs-track car__thumb__slider owl-carousel">{% for Cardpost in fink %}
+                                        <div class="ct" data-imgbigurl="{{Cardpost.imagelink}} ">
+                                                <a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><img
+                                                src="{{Cardpost.imagelink}} " alt=""><center>{{Cardpost.title}}
+                                                    <div class="newcolor" style="color:#18d44a">{{Cardpost.changepercent}}</div></center></a>
+                                        </div>
+                                    {% endfor %}   
+                                    </div>
+                                </div>
+                                
+                            </div>

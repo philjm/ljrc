@@ -1,0 +1,60 @@
+{% extends 'blog/base.html' %}
+
+{% block blog %}
+{% load static %}
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+                        {% for post in finkle %}
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item">
+                                <div class="blog__item__pic set-bg" data-setbg="{{post.blog_image.url}}">
+                                    <ul>
+                                        <li>{{post.author}}</li>
+                                        <li>{{post.published_date}}</li>
+                                    </ul>
+                                </div>
+                                <div class="blog__item__text">
+                                    <h5><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h5>
+                                    <p>{{post.text}}</p>
+                                </div>
+                            </div>
+                        </div>{% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-9">
+                    <div class="blog__sidebar">
+                        <form action="#" class="blog__sidebar__search">
+                            <input type="text" placeholder="Search...">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                        <div class="blog__sidebar__feature">
+                            <h4>Featured Articles</h4>
+                            {% for post in finkle %}
+                            <div class="blog__sidebar__feature__item">
+                                <h6><a href="{{ post.get_absolute_url }}" style="color: #af3744">{{post.title}}</a></h6>
+                                <ul>
+                                    <li>{{post.author}}</li>
+                                    <li>{{post.published_date}}</li>
+                                </ul>
+                            </div>{% endfor %}
+                        </div>
+                        <div class="blog__sidebar__newsletter">
+                            <h4>Newsletter</h4>
+                            <p>Subscribe to our newsletter and get all the latest news, stats, and more delivered to your email</p>
+                            <form action="newsletter.csv">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+{% endblock %}

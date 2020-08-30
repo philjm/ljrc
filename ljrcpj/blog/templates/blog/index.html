@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+
+{% block index %}
+{% include 'blog/hero.html' %}
+
+    <!-- Services Section Begin -->
+{% include 'blog/our_services.html' %}
+    <!-- Services Section End -->
+
+    <!-- Feature Section Begin -->
+{% include 'blog/our_features.html' %}
+  
+    <!-- Feature Section End -->
+
+    <!-- Card Section Begin -->
+{% include 'cards/cardsection.html' %}
+
+   
+    <!-- Car Section End -->
+
+    <!-- Chooseus Section Begin -->
+{% include 'blog/chooseus.html' %}
+
+    <!-- Chooseus Section End -->
+
+    <!-- Latest Blog Section Begin -->
+{% include 'blog/latest_news.html' %}
+    <!-- Latest Blog Section End -->
+
+    <!-- Cta Begin -->
+{% include 'blog/cta.html' %}
+    <!-- Cta End -->
+
+ {% endblock %}

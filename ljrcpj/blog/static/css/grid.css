@@ -1,0 +1,20 @@
+
+<style>
+
+body {
+    background: #478dee;
+    margin: 5px;
+    padding: 0px;
+
+    font-family: -apple-system, BlinkMacSystemFont,
+
+“Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+
+“Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+sans-serif;
+}
+
+div.header {
+    text-transform: uppercase;
+}
+</style>

@@ -1,0 +1,207 @@
+{% extends 'blog/base.html' %}
+{% block carddetails %}
+{% load static %}
+    <section class="car spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Learn about all the</span>
+                        <h2>Lebron James Rookie Cards</h2>
+                    </div>
+                    <ul class="filter__controls">
+                        <li class="active" data-filter="*">Every Rookie Card</li>
+                        <li data-filter=".psa10">PSA 10</li>
+                        <li data-filter=".psa9">PSA 9</li>
+                        <li data-filter=".psa8">PSA 8</li>
+                        <li data-filter=".bgs10">BGS 10</li>
+                        <li data-filter=".bgs95">BGS 9.5</li>
+                        <li data-filter=".bgs9">BGS 9</li>
+                        <li data-filter=".raw">Raw</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row car-filter">{{ forloop.counter }}{% for Cardpost in psa10 %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix psa10">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <a href="{{ Cardpost.get_absolute_url }}"><img src="{{ Cardpost.imagelink }}" alt=""></a>
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{ Cardpost.season }}</div>
+                                <h4><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744">{{ Cardpost.title }}</a></h4>
+                                <ul>
+                                    <li><span>60 Day Stats <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i> -<br> {{Cardpost.tagg}}</span></li>
+                                    <li><span>High {{Cardpost.high}}</span></li>
+                                    <li><span>Avg. {{ Cardpost.average }}</span></li>
+                                    <li><span>Volume {{Cardpost.salesvolume}}</span></li>
+                                    <li><span>Tx. {{Cardpost.transactionvolume}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="{{Cardpost.ebayafflink}}" target="blank"><span class="car-option">Buy Now</span></a>
+                                <h6>{{ Cardpost.changepercent }}<span> / 60 days</span><br><h5><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><u><center>More Stats & Info.</center></u></a></h5></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+                {{ forloop.counter }}{% for Cardpost in psa9 %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix psa9">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <a href="{{ Cardpost.get_absolute_url }}"><img src="{{ Cardpost.imagelink }}" alt=""></a>
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{ Cardpost.season }}</div>
+                                <h4><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744">{{ Cardpost.title }}</a></h4>
+                                <ul>
+                                    <li><span>60 Day Stats <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i> -<br> {{Cardpost.tagg}}</span></li>
+                                    <li><span>High {{Cardpost.high}}</span></li>
+                                    <li><span>Avg. {{ Cardpost.average }}</span></li>
+                                    <li><span>Volume {{Cardpost.salesvolume}}</span></li>
+                                    <li><span>Tx. {{Cardpost.transactionvolume}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="{{Cardpost.ebayafflink}}"><span class="car-option">Buy Now</span></a>
+                                <h6>{{ Cardpost.changepercent }}<span> / 60 days</span><br><h5><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><u><center>More Stats & Info.</center></u></a></h5></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+                {{ forloop.counter }}{% for Cardpost in psa8 %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix psa8">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <a href="{{ Cardpost.get_absolute_url }}"><img src="{{ Cardpost.imagelink }}" alt=""></a>
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{ Cardpost.season }}</div>
+                                <h4><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744">{{ Cardpost.title }}</a></h4>
+                                <ul>
+                                    <li><span>60 Day Stats <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i> -<br> {{Cardpost.tagg}}</span></li>
+                                    <li><span>High {{Cardpost.high}}</span></li>
+                                    <li><span>Avg. {{ Cardpost.average }}</span></li>
+                                    <li><span>Volume {{Cardpost.salesvolume}}</span></li>
+                                    <li><span>Tx. {{Cardpost.transactionvolume}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="{{Cardpost.ebayafflink}}"><span class="car-option">Buy Now</span></a>
+                                <h6>{{ Cardpost.changepercent }}<span> / 60 days</span><br><h5><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><u><center>More Stats & Info.</center></u></a></h5></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+                {{ forloop.counter }}{% for Cardpost in bgs10 %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix bgs10">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <a href="{{ Cardpost.get_absolute_url }}"><img src="{{ Cardpost.imagelink }}" alt=""></a>
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{ Cardpost.season }}</div>
+                                <h4><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744">{{ Cardpost.title }}</a></h4>
+                                <ul>
+                                    <li><span>60 Day Stats <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i> -<br> {{Cardpost.tagg}}</span></li>
+                                    <li><span>High {{Cardpost.high}}</span></li>
+                                    <li><span>Avg. {{ Cardpost.average }}</span></li>
+                                    <li><span>Volume {{Cardpost.salesvolume}}</span></li>
+                                    <li><span>Tx. {{Cardpost.transactionvolume}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="{{Cardpost.ebayafflink}}"><span class="car-option">Buy Now</span></a>
+                                <h6>{{ Cardpost.changepercent }}<span> / 60 days</span><br><h5><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><u><center>More Stats & Info.</center></u></a></h5></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+                {{ forloop.counter }}{% for Cardpost in bgs95 %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix bgs95">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <a href="{{ Cardpost.get_absolute_url }}"><img src="{{ Cardpost.imagelink }}" alt=""></a>
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{ Cardpost.season }}</div>
+                                <h4><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744">{{ Cardpost.title }}</a></h4>
+                                <ul>
+                                    <li><span>60 Day Stats <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i> -<br> {{Cardpost.tagg}}</span></li>
+                                    <li><span>High {{Cardpost.high}}</span></li>
+                                    <li><span>Avg. {{ Cardpost.average }}</span></li>
+                                    <li><span>Volume {{Cardpost.salesvolume}}</span></li>
+                                    <li><span>Tx. {{Cardpost.transactionvolume}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="{{Cardpost.ebayafflink}}"><span class="car-option">Buy Now</span></a>
+                                <h6>{{ Cardpost.changepercent }}<span> / 60 days</span><br><h5><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><u><center>More Stats & Info.</center></u></a></h5></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+                {{ forloop.counter }}{% for Cardpost in bgs9 %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix bgs9">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <a href="{{ Cardpost.get_absolute_url }}"><img src="{{ Cardpost.imagelink }}" alt=""></a>
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{ Cardpost.season }}</div>
+                                <h4><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744">{{ Cardpost.title }}</a></h4>
+                                <ul>
+                                    <li><span>60 Day Stats <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i> -<br> {{Cardpost.tagg}}</span></li>
+                                    <li><span>High {{Cardpost.high}}</span></li>
+                                    <li><span>Avg. {{ Cardpost.average }}</span></li>
+                                    <li><span>Volume {{Cardpost.salesvolume}}</span></li>
+                                    <li><span>Tx. {{Cardpost.transactionvolume}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="{{Cardpost.ebayafflink}}"><span class="car-option">Buy Now</span></a>
+                                <h6>{{ Cardpost.changepercent }}<span> / 60 days</span><br><h5><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><u><center>More Stats & Info.</center></u></a></h5></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+                {{ forloop.counter }}{% for Cardpost in raw %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix raw">
+                    <div class="car__item">
+                        <div class="car__item__pic__slider owl-carousel">
+                            <a href="{{ Cardpost.get_absolute_url }}"><img src="{{ Cardpost.imagelink }}" alt=""></a>
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <div class="label-date">{{ Cardpost.season }}</div>
+                                <h4><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744">{{ Cardpost.title }}</a></h4>
+                                <ul>
+                                    <li><span>60 Day Stats <i class="fa fa-line-chart fa-1x" aria-hidden="true"></i> -<br> {{Cardpost.tagg}}</span></li>
+                                    <li><span>High {{Cardpost.high}}</span></li>
+                                    <li><span>Avg. {{ Cardpost.average }}</span></li>
+                                    <li><span>Volume {{Cardpost.salesvolume}}</span></li>
+                                    <li><span>Tx. {{Cardpost.transactionvolume}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="{{Cardpost.ebayafflink}}"><span class="car-option">Buy Now</span></a>
+                                <h6>{{ Cardpost.changepercent }}<span> / 60 days</span><br><h5><a href="{{ Cardpost.get_absolute_url }}" style="color:#af3744"><u><center>More Stats & Info.</center></u></a></h5></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+            
+
+              
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Details Section End -->{% endblock %}

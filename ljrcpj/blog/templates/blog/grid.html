@@ -1,0 +1,56 @@
+{% for post in finkle %}
+    <div class="row">
+        <div class="col-md-4">
+          <div class="card-deck">
+                <div class="card card card-blog">
+                    <div class="card-image">
+                        <a href="#pablo">
+                            <img class="img rounded img-raised" src="{{ post.blog_image.url }}" />
+                        </a>
+                    </div>
+
+                    <div class="card-body">
+
+
+                        
+                        </a>
+
+                        <h4 class="card-title">
+                            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                        </h4>
+                        <p class="card-description">
+                            {{ post.text|truncatewords:30|linebreaks }}
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <div class="col-md-4">
+            <div class="card-deck">
+                <div class="card card card-blog">
+                    <div class="card-image">
+                        <a href="#pablo">
+                            <img class="img rounded img-raised" src="{{ next_post.blog_image.url }}" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+
+
+                      
+                        <h4 class="card-title">
+                            <a href="{{ next_post.get_absolute_url }}">{{ next_post.title }}</a>
+                        </h4>
+                        <p class="card-description">
+                            {{ next_post.text|truncatewords:30|linebreaks }}
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

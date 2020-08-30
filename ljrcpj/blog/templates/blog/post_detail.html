@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block postdetail %}
+
+<div class="container">
+                <div class="row">
+      
+              <!-- Blog Entries Column -->
+              <div class="col-md-8 mt-3 left">
+                    {% for post in finkle %}
+                <div class="card mb-4" >
+                  <div class="card-body">
+                    <i class="fa fa-camera-retro fa-lg"></i> fa-lg
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <img src="{{ post.blog_image.url}}" alt="{{ post.title }}">
+
+                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+
+                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <a href="" class="btn btn-primary">Read More &rarr;</a>
+                  </div>
+                 
+                </div>
+                {% endfor %}
+{% endblock %}                

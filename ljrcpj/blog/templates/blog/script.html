@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link href="https://fonts.googleapis.com/css?family=DM+Sans:400,700&amp;display=swap" rel="stylesheet"/>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-144024525-2">
+</script>
+<script>window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'UA-144024525-2');</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+<script>
+;(function (a, b, c, e, f, g) {if (a.wpasGadget) {return};e = 'script';g = b.createElement(e);e = b.getElementsByTagName(e)[0];g.async = 1;g.src = c;e.parentNode.insertBefore(g, e);})(window, document, 'https://www.sportscardinvestor.com/wp-content/plugins/awesome-support-remote-tickets/assets/public/js/gadget-dist.js');var wpasData = {"gadgetID":"1046","url":"https://www.sportscardinvestor.com/wp-json/"}
+function updateASForm () {
+    document.querySelectorAll('#wpas-ticket-submit')[0].value = 'Submit';
+    const { email } = window.localStorage.sci_user ? JSON.parse(window.localStorage.sci_user) : { email: '' };
+    document.querySelectorAll('#wpas_email')[0].value = email;
+    document.querySelectorAll('#wpas_password')[0].value = '';
+    document.querySelectorAll('#wpas_email')[0].type = 'hidden';
+    document.querySelectorAll('#wpas_password')[0].type = 'hidden';
+    document.querySelectorAll('#wpas_password')[0].value = '0000';
+    document.querySelectorAll('.email-wrap')[0].style.display = 'none';
+    document.querySelectorAll('.password-wrap')[0].style.display = 'none';
+    document.querySelectorAll('.title-wrap')[0].style.borderTop = 'none';
+    document.querySelectorAll('.file-wrap')[0].style.display = 'none';
+    document.querySelectorAll('.file-wrap');
+    var wpasTypeItem = document.querySelector('#wpas_type');
+    if (!wpasTypeItem) {
+        const p = document.createElement('p');
+        p.style.flex = '1 100%';
+        p.innerHTML = '<label for="wpas_type">Request Type</label><select id="wpas_type"><option value="Add Player">Add a Player</option><option value="Bug">Bug</option><option value="New Feature">New Feature</option><option value="Other">Other</option></select>';
+        document.querySelectorAll('#wpas-ticket-form')[0].insertBefore(p, document.querySelector('.title-wrap'));
+    }
+    var detailsText = "Provide year, set(s), variation(s), and if possible, card # and a link to the card(s) on eBay.";
+    document.querySelector('[for="wpas_content"]').innerText = detailsText;
+    document.querySelector('[for="wpas_title"]').innerText = "Player Name";
+    document.querySelectorAll('#wpas_type')[0].onchange = function (e) {
+        if (e.target.value === 'Add Player') {
+            document.querySelector('[for="wpas_content"]').innerText = detailsText;
+            document.querySelector('[for="wpas_title"]').innerText = "Player Name";
+        } else {
+            document.querySelector('[for="wpas_content"]').innerText = "Description";
+            document.querySelector('[for="wpas_title"]').innerText = "Subject";
+        }
+    }
+}
+var wpasInt;
+wpasInt = setInterval(() => {
+    const wpasButton = document.querySelector('#wpas-button');
+    if (wpasButton) {
+        clearInterval(wpasInt);
+        document.querySelector('#wpas-button').onclick = function (e) {
+            updateASForm();
+        }
+    }
+}, 500);
+</script><meta charSet="utf-8"/><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/GKt_16v1hCiGiuiPG3wko/pages/playercharts.js" as="script"/><link rel="preload" href="/_next/static/GKt_16v1hCiGiuiPG3wko/pages/_app.js" as="script"/><link rel="preload" href="/_next/static/runtime/webpack-c7fe1e4459f75949add0.js" as="script"/><link rel="preload" href="/_next/static/chunks/commons.2a0cd79adaaed8f6d6d9.js" as="script"/><link rel="preload" href="/_next/static/chunks/styles.dc3c262e1457b38061eb.js" as="script"/><link rel="preload" href="/_next/static/runtime/main-f7fa3351a635ed2fc3fb.js" as="script"/><link rel="preload" href="/_next/static/css/commons.7d750acd.chunk.css" as="style"/><link rel="stylesheet" href="/_next/static/css/commons.7d750acd.chunk.css"/><link rel="preload" href="/_next/static/css/styles.f1e2e4fc.chunk.css" as="style"/><link rel="stylesheet" href="/_next/static/css/styles.f1e2e4fc.chunk.css"/></head><body><div id="__next"><div class="ant-spin-nested-loading"><div class="ant-spin-container"><section class="ant-layout" style="height:100%"><header class="mobile-menu ant-layout-header" style="background-color:#004CFE;height:65px;top:0;position:sticky;width:100%;z-index:1000"><a href="/dashboard"><img class="logo" style="width:120px;margin-left:20px;margin-top:14px;float:left" src="/logo-mm.png"/></a></header><aside class="main-navigation ant-layout-sider ant-layout-sider-dark ant-layout-sider-collapsed ant-layout-sider-has-trigger" style="flex:0 0 60px;max-width:60px;min-width:60px;width:60px"><div class="ant-layout-sider-children"><a href="/dashboard"><img class="logo" style="width:100%" src="/mm-white.svg"/></a></div><div class="ant-layout-sider-trigger" style="width:60px"><i aria-label="icon: right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></div></aside><main class="ant-layout-content"></main></section></div></div></div><script id="__NEXT_DATA__" type="application/json">{"dataManager":"[]","props":{"pageProps":{},"apolloState":{}},"page":"/playercharts","query":{},"buildId":"GKt_16v1hCiGiuiPG3wko","runtimeConfig":{"API_HOST":"https://sci-api-production.herokuapp.com","WP_HOST":"https://www.sportscardinvestor.com","REMOTE_TICKET_ID":"1046","FULLSTORY_ORG":"REP41"}}</script><script nomodule="" src="/_next/static/runtime/polyfills-8f7f106d722b7b40d723.js"></script><script async="" data-next-page="/playercharts" src="/_next/static/GKt_16v1hCiGiuiPG3wko/pages/playercharts.js"></script><script async="" data-next-page="/_app" src="/_next/static/GKt_16v1hCiGiuiPG3wko/pages/_app.js"></script><script src="/_next/static/runtime/webpack-c7fe1e4459f75949add0.js" async=""></script><script src="/_next/static/chunks/commons.2a0cd79adaaed8f6d6d9.js" async=""></script><script src="/_next/static/chunks/styles.dc3c262e1457b38061eb.js" async=""></script><script src="/_next/static/runtime/main-f7fa3351a635ed2fc3fb.js" async=""></script></body></html>
